@@ -1,0 +1,354 @@
+sramya@LIN65006014 MINGW64 ~/desktop (master)
+$ cd desktop
+bash: cd: desktop: No such file or directory
+
+sramya@LIN65006014 MINGW64 ~/desktop (master)
+$ mkdir project_dir
+
+sramya@LIN65006014 MINGW64 ~/desktop (master)
+$ cd project_dir
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git init
+Initialized empty Git repository in C:/Users/SRAMYA/Desktop/project_dir/.git/
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ ls index.html
+index.html
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git add index.html
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git add -- all
+fatal: pathspec 'all' did not match any files
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git add --all
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New Text Document.txt
+
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git commit -m 'hello world'
+[master (root-commit) b86c1df] hello world
+ Committer: Ramya <surabhi.ramya@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git status  --shortM index.html
+error: unknown option `shortM'
+usage: git status [<options>] [--] <pathspec>...
+
+    -v, --verbose         be verbose
+    -s, --short           show status concisely
+    -b, --branch          show branch information
+    --show-stash          show stash information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain[=<version>]
+                          machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --ignored[=<mode>]    show ignored files, optional modes: traditional, matching, no. (Default: traditional)
+    --ignore-submodules[=<when>]
+                          ignore changes to submodules, optional when: all, dirty, untracked. (Default: all)
+    --column[=<style>]    list untracked files in columns
+    --no-renames          do not detect renames
+    -M, --find-renames[=<n>]
+                          detect renames, optionally set similarity index
+    --show-ignored-directory
+                          (DEPRECATED: use --ignore=matching instead) Only show directories that match an ignore pattern name.
+    --no-lock-index       (DEPRECATED: use `git --no-optional-locks status` instead) Do not lock the index
+
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git commit -a -m 'updated index.html'
+[master 3415977] updated index.html
+ Committer: Ramya <surabhi.ramya@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+)
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New Text Document.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git rm -- cached info.txt
+fatal: pathspec 'cached' did not match any files
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New Text Document.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git add info.txt
+fatal: pathspec 'info.txt' did not match any files
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New Text Document.txt
+        info.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git add info.txt
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   info.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New Text Document.txt
+
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git rm -- cached info.txt rm 'info.txt'
+fatal: pathspec 'cached' did not match any files
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   info.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New Text Document.txt
+
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git commit -a-m 'updated index.html'
+error: unknown option `m'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git log
+commit 34159779e365712f1a3387c04aa85211b2d49090 (HEAD -> master)
+Author: Ramya <surabhi.ramya@capgemini.com>
+Date:   Tue May 17 14:31:07 2022 +0530
+
+    updated index.html
+
+commit b86c1df6c3ecdf2b01d6fa294b74ec997a92082a
+Author: Ramya <surabhi.ramya@capgemini.com>
+Date:   Tue May 17 14:28:55 2022 +0530
+
+    hello world
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git commit -m 'hello'
+[master 376ae77] hello
+ Committer: Ramya <surabhi.ramya@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 info.txt
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
+$ git commit -help
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+sramya@LIN65006014 MINGW64 ~/desktop/project_dir (master)
